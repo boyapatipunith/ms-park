@@ -1,0 +1,51 @@
+<?php
+   session_start();
+   if (!isset($_SESSION["uname"])){
+    header('Location: index.html');
+  }
+?>
+<html>
+<head>
+<title>aleft</title>
+<link rel="stylesheet" type="text/css" href="left.css">
+</head>
+<body>
+<table width="100%">
+<tr>
+<td>
+<a href="ticket.html" target="f3">Booking</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="database.html" target="f3">Database</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="image.html" target="f3">Images</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="about.html" target="f3">About</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="map.html" target="f3">Map</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="details.html" target="f3">Details</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="lout.html"target="_blank">Logout</a>
+</td>
+</tr>
+</table>
+</body>
+</html>

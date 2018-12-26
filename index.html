@@ -1,0 +1,198 @@
+<html>
+<head>
+		<link rel="stylesheet" href="l.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="images.png">
+		<title>index</title>
+	<style>
+a
+{
+	font-size:70px;
+	text-decoration:none;
+	color:red;
+	}
+		.logo img{
+			
+			height:200px;
+			width:200px;
+			
+		}
+
+		.popup{
+			height: 100vh;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .8);
+			z-index: 100;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			visibility: hidden;
+			transition: all .5s;
+		}
+		
+		.popup:target{
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.final__register-wrapper {
+     
+     position: relative;
+     z-index: 3;
+     padding: 100px;
+     font-size:16px;
+     color: red;
+   }
+   .final__register-wrapper * {
+     box-sizing: border-box;
+   }
+   .final__register-wrapper form input ,.final__register-block a:link,.final__register-block a:visited{
+     display: inline-block;
+     width: 100%;
+     padding: 0 20px;
+     line-height: 50px;
+     height: 50px;
+     background-color: white;
+     border: 1px solid #e6e6e6;
+     border-bottom-width: 3px;
+     border-radius: 5px;
+     outline: 0;
+     -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+   }
+   .final__register-wrapper form input:not(:last-child) {
+     margin-bottom: 20px;
+   }
+   .final__register-wrapper form input[type="text"]:focus, .final__register-wrapper form input[type="text"]:active, .final__register-wrapper form input[type="password"]:focus, .final__register-wrapper form input[type="password"]:active {
+     border-color: #cccccc;
+   }
+   .final__register-wrapper form input[type="submit"] ,.final__register-block a:link,.final__register-block a:visited{
+     position: relative;
+     z-index: 1;
+     display: inline-block;
+     padding: 0 20px;
+     font-size: 1rem;
+     background-color: green;
+     background-size: 100%;
+     background-image: -webkit-linear-gradient(45deg,
+                                                rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%,
+                                                rgba(0, 0, 0, 0) 50%,
+                                                rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%,
+                                                rgba(0, 0, 0, 0));
+     background-image:          linear-gradient(45deg,
+                                                rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%,
+                                                rgba(0, 0, 0, 0) 50%,
+                                                rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%,
+                                                rgba(0, 0, 0, 0));
+     background-size: 20px 20px, 100% 100%;
+     border: 1px solid green;
+     border-bottom-width: 3px;
+     color: white;
+     outline: none;
+     cursor: pointer;
+     -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+   }
+   .final__register-wrapper form input[type="submit"]:hover ,.final__register-block a:hover{
+     background-size: 40px 40px;
+   }
+   .final__register-title {
+     font-size: 1.5em;
+     padding-bottom: 20px;
+     margin: 0 0 20px;
+     border-bottom: 1px dashed black;
+   }
+   .final__register-block {
+     position: relative;
+     display: block;
+     width: 100%;
+     max-width: 300px;
+     margin: auto;
+     padding: 30px;
+     background-color: yellow;
+     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+     border-radius: 5px;
+   }
+   
+   .final__register-block:hover:before {
+     z-index: -1;
+     -webkit-transform: scale(0.96) translate(0, 16px);
+             transform: scale(0.96) translate(0, 16px);
+   }
+   .final__register-block:hover:after {
+     z-index: -2;
+     -webkit-transform: scale(0.92) translate(0, 32px);
+             transform: scale(0.92) translate(0, 32px);
+   }
+
+   .popup-close:link,.popup-close:visited{
+   	color: #ddd;
+   	position: absolute;
+   	right: 50px;
+   	font-size: 30px;
+   	text-decoration: none;
+   	display: inline-block;
+   	border: 5px solid #ddd;
+   	padding:0 7px;
+   	border-radius: 100%;
+   	transition: all .5s;
+   }
+
+		
+	</style>
+</head>
+<body>
+	<div class="popup" id="popup">
+		            <div class="final__register-wrapper">
+		            	<a href="#parallax" class="popup-close">&times;</a>
+              <div class="final__register-block">
+                <h3 class="final__register-title">User Login</h3>
+              
+                <form id="myform" action="userlogin.php" method="post">
+                  <input type="text" name="un" maxlength="10" required placeholder="Enter your User id"/>
+                  <input type="password" name="pwd" required placeholder="Enter your password" />
+                  <input type="submit" value="Sign-In" name="submit"/>
+                </form>
+                <a href="reg.php" style="text-align: center;">New User?</a>
+              </div>
+            </div>
+	</div>
+	<div class="popup" id="popup1">
+		            <div class="final__register-wrapper">
+		            	<a href="#parallax" class="popup-close">&times;</a>
+              <div class="final__register-block">
+                <h3 class="final__register-title">Admin Login</h3>
+              
+                <form name="f1" action="alogin.php" method="post">
+                  <input type="text" name="t1" maxlength="10" required placeholder="Enter your User id"/>
+                  <input type="password" name="t2" required placeholder="Enter your password" />
+                  <input type="submit" value="Sign-In" name="submit"/>
+                </form>
+              </div>
+            </div>
+	</div>
+<div class="logo" style="float:left;"><img src="images.png" alt="svec logo" height="75" width="75"></div>
+<div class="heading">
+	<p style="text-align:center;font-size:40pt;color:green; font-weight:bold;">MS NATIONAL ZOOLOGICAL PARK</p>
+	<br><br><br>
+		<hr>
+	</div>
+	<div class="parallax" id="parallax">
+			
+			
+		</div>
+    <br><br><br><br><br>
+	<div class="container" align="center">
+		<div class="container-sub"align="center">
+			<button><a href="#popup1" class="button" align="center">Admin</a></button>
+			&nbsp;&nbsp;&nbsp;
+			<button><a href="#popup" class="button" align="center" >User</a></button>
+		</div>
+	</div>
+	
+</body>
+</html>
