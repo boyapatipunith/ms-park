@@ -1,0 +1,258 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="register.css">
+<script language="javascript">
+function fnvalidate() 
+{ 
+	var f=f1.t1.value; 
+	var re_fl=/\W|\d|_/; 
+	if(f.length<8) 
+	{ 
+		var x=document.getElementById("first"); 
+		x.innerHTML="First Name should More than 8 characters"; 
+		flag=1; 
+	} 
+	if(re_fl.test(f)) 
+	{ 
+		var x=document.getElementById("first"); 
+		x.innerHTML="First name should only alphabets"; 
+	} 
+} 
+	function lnvalidate() 
+	{ 
+		var l=f1.t2.value; 
+		var re_fl=/\W|\d|_/; 
+		if(l.length<8) 
+		{ 
+			var x=document.getElementById("last"); 
+			x.innerHTML="Last Name should be More than 8 characters"; 
+		} 
+		if(re_fl.test(l)) 
+		{ 
+			var x=document.getElementById("last"); 
+			x.innerHTML="Last name should only alphabets"; 
+			flag=1; 
+		} 
+	} 
+	function unvalidate() 
+	{ 
+		var u=f1.t3.value; 
+		var re_un1=/\d/; 
+		var re_un2=/[a-z]|[A-Z]/; 
+		var re_un3=/_/; 
+		var re_un=/\W/; 
+		if(u.length<8) 
+		{ 
+			var x=document.getElementById("uid"); 
+			x.innerHTML="enter More than 8 characters"; 
+			flag=1; 
+		} 
+		if(!(re_un1.test(u)&&re_un2.test(u)&&re_un3.test(u))||re_un.test(u)) 
+		{ 
+			var x=document.getElementById("uid"); 
+			x.innerHTML="user name should contains alphanumerics and _"; 
+			flag=1; 
+		} 
+	} 
+	function pwdvalidate() 
+	{ 
+		var p=f1.t4.value; 
+		var re2=/[A-Z]/; 
+		var re3=/\W/; 
+		if(!(p.length>8&&re2.test(p)&&re3.test(p))) 
+		{ 
+			var x=document.getElementById("pswd"); 
+			x.innerHTML="password should be greater than 8 and Should have Uppercase and Special Symbol"; 
+			flag=1; 
+		} 
+	} 
+	function validate() 
+	{ 
+		var flag=0; 
+		var f=f1.t1.value; 
+		var l=f1.t2.value; 
+		var u=f1.t3.value; 
+		var p=f1.t4.value; 
+		if(f==''||l==''||u==''||p=='') 
+		{	 
+			alert("please fill all details"); 
+			flag=1; 
+		} 
+		if(flag==0) 
+		{ 
+			document.writeln("<html><body bgcolor=cyan>Welcome to"+f+" "+l+"</body></html>"); 
+		} 
+	} 
+
+	
+function clear()
+{
+	var x=document.getElementById("first").innerHTML=" ";
+}
+function pcvalidate()
+{
+  var p=f1.t1.value;
+  var re_pd=/\D/;
+  var re_ps=/^5/;
+  if(p.length!=6)
+  {    
+     var x=document.getElementById("first");
+     x.innerHTML="postal code should be exactly 6 digits";
+     flag=1;
+  }
+  if(re_pd.test(p)|| !re_ps.test(p))
+  {
+       var x=document.getElementById("first");
+       x.innerHTML="Postal Code Should be Digits and starts with 5";
+  }
+}
+function mnvalidate()
+{
+  var m=f1.t2.value;
+  var re_md=/\D/;
+  var re_ms=/^9|^8|^7|^6/;
+  if(m.length<10)
+  {    
+     var x=document.getElementById("last");
+     x.innerHTML="mobile number should be exactly 10 digits";
+     flag=1;
+  }
+  if(re_md.test(m)|| !re_ms.test(m))
+  {
+       var x=document.getElementById("last");
+       x.innerHTML="Mobile Number Should be Digits and starts with 6/7/8/9";
+  }
+}
+function emvalidate()
+{
+       var e=f1.t3.value;
+       var atpos=e.indexOf("@");
+	   //alert(atpos);
+       var dotpos=e.lastIndexOf(".");
+       if(atpos<1 || dotpos<atpos+3 || dotpos+2>=e.length)
+          {
+       var x=document.getElementById("eid");
+       x.innerHTML="Invalid Mail Id";
+  }
+}
+function validate() 
+	{ 
+	var flag=0; 
+	var p=f1.t1.value; 
+	var mn=f1.t2.value; 
+	var em=f1.t3.value;  
+	if(p==''||mn==''||em=='') 
+	{ 
+	alert("please fill all details"); 
+	flag=1; 
+	} 
+	if(flag==0) 
+	{ 
+	document.writeln("<html><body bgcolor=cyan>Welcome to"+f+" "+l+"</body></html>"); 
+	} 
+	} 
+</script>
+</head>
+<body bgcolor="safron">
+<form name="f1">
+<table width="100%">
+<tr>
+<td>
+<h3>first name:</h3>
+</td>
+<td>
+<input type="text" name="t1" size="30" onblur="fnvalidate()"><span id="first" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>last name:</h3>
+</td>
+<td>
+<input type="text" name="t2" size="30" onblur="lnvalidate()"><span id="last" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>gender</h3>
+</td>
+<td>
+<h3><input type="radio" name="gender" value="male">male</h3>
+<h3><input type="radio" name="gender" value="female">female</h3>
+</td>
+</tr>
+<tr>
+<td>
+<h3>date of birth</h3>
+</td>
+<td>
+<input type="date" name="dob" size="30">
+</td>
+</tr>
+<tr>
+<td>
+<h3>user name</h3>
+</td>
+<td>
+<input type="text" name="t3" size="30" onblur="unvalidate()"><span id="uid" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>password</h3>
+</td>
+<td>
+<input type="password" name="t4" size="30" onblur="pwdvalidate()"><span id="pswd" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>confirm password</h3>
+</td>
+<td>
+<input type="password" name="t4" size="30" onblur="pwdvalidate()"><span id="pswd" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>Address</h3>
+</td>
+<td>
+<textarea rows="10" cols="20" name="Address">
+</textarea>
+</td>
+</tr>
+<tr>
+<td>
+<h3>postal code</h3>
+</td>
+<td>
+<input type="number" name="t1" size="30" maxlength="6" onblur="pcvalidate()"><span id="first" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>phone no</h3>
+</td>
+<td>
+<input type="number" name="phoneNo" size="30" maxlength="10" onblur="mnvalidate()"><span id="last" style="color:red"> </span>
+</td>
+</tr>
+<tr>
+<td>
+<h3>mail</h3>
+</td>
+<td>
+<input type="email" name="mail" size="30" onblur="emvalidate()"><span id="eid" style="color:red"> </span>
+</td>
+</tr>
+<tr align="center">
+<td>
+<input type="submit" value="submit" onClick="validate()">
+<input type="reset" value="reset">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body
+{
+	background:url('login1.jpg');
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+h1
+{
+	color:cyan;
+}
+a
+{
+	font-weight:bold;
+	color:cyan;
+	font-size:30;
+}
+p
+{
+	color:red;
+	font-size:20;
+}
+a
+{
+	text-decoration:none;
+}
+

@@ -1,0 +1,14 @@
+
+body
+{
+	background:url('left.jpg');
+	background-repeat:no-repeat;
+	
+}
+a
+{
+	font-family:times new roman;
+	font-size:30;
+	color:red;
+	text-decoration:none;
+}

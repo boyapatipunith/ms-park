@@ -1,0 +1,17 @@
+body
+{
+	background-image:url('lan.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100%;
+}
+h1
+{
+	font-family:times new roman;
+	color:cyan;
+	font-size:50;
+}
+a
+{
+	color:yellow;
+}

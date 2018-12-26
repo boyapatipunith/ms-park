@@ -1,0 +1,206 @@
+			body{
+				background:url('index2.jpg');
+				max-width: 100vw;
+				font-family: sans-serif;
+				background-repeat:no-repeat;
+				background-size:100%;
+			}
+			.animate{
+				animation-name: anim;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-direction: linear;
+				position: relative;
+			}
+			.head{
+				display: inline-block;
+				color:green;
+				font-size: 40px;
+			}
+			@keyframes anim{
+				0%{top:0em; transform: translateY(-60px);}
+				40%{top:0em; transform: translateY(0px);}
+				50%{top:0em; transform: scale(1) rotateY(0deg); }
+				60%{top:0.3em; transform: scale(2) rotateY(180deg);}
+				75%{top:0em;transform: scale(1);}
+				80%{top:0em;}
+				85%{transform:rotateY(0deg);}
+				90%{top:0em; transform: scale(1) rotateY(0deg);}
+			}
+			.heading{
+				width: 90vw;
+				margin:0 auto;
+				padding: 20px;
+			}
+			
+			.heading p{
+				display: flex;
+				justify-content: center;
+				margin: auto;
+
+			}
+			hr{
+				margin-top: 20px;
+			}
+
+			.container{
+				display: flex;
+				flex-direction: column;
+			}
+			.container-sub{
+				display:flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
+			.container-sub a:link,
+			.container-sub a:visited{
+				width: 300px;
+				padding: 20px;
+				position: relative;	
+				background: green;
+				color: #fff;
+				text-decoration: none;
+				text-align: center;
+				display: block;
+				z-index: 10;
+				font-size: 20px;
+				margin: 20px;
+				border-radius: 5px;
+			}
+			.container-sub a::before{
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background-color: #d89b2b;
+				transition: all 1s;
+				transform: scaleX(0);
+			}
+
+			.container-sub a:hover::before {
+				z-index: -1;
+				transform: scaleX(1);
+			}
+
+			.contact-container{
+				display: flex;
+				justify-content: center;
+				letter-spacing: 3px;
+				max-width: 90vw;
+			}
+			.contact-icon-edit{
+				font-size: 40px;
+				color: #ffa500;
+				-webkit-text-stroke: 3px #fff;
+			}
+			.contact-container-main{
+				display: flex;
+				flex-direction: column;
+				border:2px solid #fff;
+				max-width: 90vw;
+			}
+			.contact-icon_container{
+				
+				text-align: center;
+				padding: 10px;
+				border-radius: 100%;
+				margin: 20px;
+			}
+			.contact-addtext{
+				font-size: 20px;
+				font-weight: 500;
+				color: #000;
+				line-height: 30px;
+				margin: 20px;
+				margin-left: 50px
+			}
+			.contact-container-sub{
+				display: flex;
+				flex-direction: row;
+			}
+			.contact-center-it{
+				display: flex;
+				align-items: center;
+			}
+			.person{
+				width: 250px;
+				display: flex;
+				flex-direction: column;
+				margin: 20px;
+				/*background: #eee;*/
+				align-items: center;
+				border-radius: 3px;
+			}
+			.person:hover{
+				transform: translateY(-10px);
+				box-shadow: 1px 2px 5px #222 ,-5px -5px 3px #222;
+				transition: all .5s;
+				
+			}
+			.person:hover .details{
+				color: #ffa500;
+				transition: all .5s;
+			}
+
+			.person:not(:hover){
+				transition: all .5s;
+			}
+			.pic{
+				height: 200px;
+				width: 85%;
+				background-size: cover;
+				border-radius: 100%;
+				margin: 10px;
+			}
+			.person1{
+				background-image: url("images/1.jpg");
+			}
+			.person2{
+				background-image: url("images/2.jpg");
+			}
+			.person3{
+				background-image: url("images/3.jpg");
+			}
+			.person4{
+				background-image: url("images/4.jpg");
+			}
+			.peoplecontainer{
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			.peoplecontainer-sub{
+				display: flex;
+				flex-direction: row;
+				width:700px;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			.details{
+				font-size: 20px;
+				color: #000;
+				padding: 10px;
+				width: 100%;
+				text-align: center;
+			}
+			.link-container{
+				width: 90vw;
+				margin:0 auto;
+			}
+			.journal{
+				list-style: none;
+				padding: 5px;
+				font-size: 20px;
+				margin-left: 5%;
+			}
+			a:link,a:visited,a:hover{
+				text-decoration: none;
+				color:#0f4688;
+			}
+			.fa{
+				color:#0f4688;
+			}

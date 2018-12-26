@@ -1,0 +1,334 @@
+p
+{
+	font-family:times new roman;
+	font-size:30;
+	color:yellow;
+}
+body
+{
+	background:url('right2.jpg');
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+.links {
+    float: left;
+    list-style: none outside none;
+    position: relative;
+}
+.links li {
+    float: left;
+    margin-right: 10px;
+}
+
+
+.social {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.social a {
+    color: #778888;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+.social .icon {
+    display: inline-block;
+    font-size: 36px;
+    margin-right: 5px;
+    vertical-align: middle;
+    -webkit-transition: -webkit-transform .3s linear;
+    -moz-transition: -moz-transform .3s linear;
+    -ms-transition: -ms-transform .3s linear;
+    -o-transition:  -o-transform .3s linear;
+    transition: transform .3s linear;
+}
+.social a:hover  .icon {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.social .info {
+    display: inline-block;
+    vertical-align: middle;
+}
+.social .info .follow {
+    display: block;
+}
+.social .info .num {
+    display: block;
+}
+.copyright {
+    color: #778888;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1000px){
+    .links, .social, .copyright{
+        float:none;
+        text-align:center;
+    }
+    .social {
+        position:relative;
+        margin:10px 0;
+        
+    }
+    .links li {
+        display:inline-block;
+        float:none;
+    }
+    .bar {
+        position:relative;
+    }
+    .bar-wrap {
+        margin-bottom:0;
+    }
+}
+@media screen and (max-width: 835px)  {
+    footer > ul li {
+        float:none;
+        width:auto;
+    }
+}
+@media screen and (max-width: 768px)  {
+    .links li {
+        margin-right:5px;
+    }
+}
+
+
+
+.as  {
+            margin-left: 120px;
+            margin-top: 20px;
+    
+        } 
+        .as1
+        {
+            float:right;
+            margin-right: 50px;
+            margin-top:10px;
+        }
+        ol li{
+            display:inline;
+        }
+
+.menu {
+    margin: 12px 26px 12px 26px;
+}
+
+
+
+
+
+
+  ul {
+    list-style-type: none;
+     box-sizing: border-box;
+    /* CRITICAL gives space to grouped elements in the navbar */
+    /* also gains the capability to be centered using text-align in parent */
+    display: inline-block;
+    /* CRITICAL removes inline's whitespace */
+    /* also tandem with child li font-size: explicit */
+    font-size: 62px;
+  }
+
+
+@-webkit-keyframes infoIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes infoIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes infoOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes infoOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+#hero {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height:65vh;
+}
+#hero:before {
+  display: block;
+  content: "";
+  padding-top: 50%;
+}
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.hero figure {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 100%;
+  position: relative;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  -webkit-transition: 0.8s linear;
+  -o-transition: 0.8s linear;
+  transition: 0.8s linear;
+  -webkit-filter: saturate(25%);
+  filter: saturate(25%);
+}
+.hero figure:not(.on):hover {
+  cursor: pointer;
+}
+.hero figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.hero figure.on {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-transition: 0.8s linear;
+  -o-transition: 0.8s linear;
+  transition: 0.8s linear;
+  z-index: 20;
+  -webkit-filter: saturate(100%);
+  filter: saturate(100%);
+}
+.hero figure div {
+  -webkit-animation: infoOut;
+  animation: infoOut;
+}
+
+.hero figure.on div {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  right: 5%;
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  -webkit-animation: infoIn 1.2s;
+  animation: infoIn 1.2s;
+}
+.hero figure.on div h2 {
+  font-size: 3em;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #00ff00;
+  margin-bottom: 10px;
+}
+.hero figure.on div p {
+  font-size: 1.7em;
+  width: 100%;
+  margin-bottom: 8%;
+}
+.hero figure.on div a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.hero figure.on div a:after {
+  content: "\f054";
+  font-family: "FontAwesome";
+  margin-left: 5px;
+  display: inline-block;
+  color: #00ff00;
+  transition: 0.3s ease;
+}
+.hero figure.on div a:hover::after {
+  transform: translateX(3px);
+  transition: 0.3s ease;
+}
+.hero figure.on div a:hover {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 2px 3px rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 800px) {
+  .hero {
+    font-size: 1.3vw;
+  }
+  .hero figure.on div {
+    padding: 20px;
+  }
+#hero {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height:50%;
+ 
+}
+}

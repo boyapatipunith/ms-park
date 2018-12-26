@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Birds</title>
+<link rel="stylesheet" type="text/css" href="birds.css">
+</head>
+<body>
+<table width="100%">
+<tr>
+<td>
+<a href="parrot.html">PARROTS</a>
+</td>
+<td>
+<a href="peacock.html">PEACOCK</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="duck.html">DUCK</a>
+</td>
+<td>
+<a href="pigeon.html">PEGION</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="mynaah.html">MYNAAH</a>
+</td>
+<td>
+<a href="eagle.html">EAGLE</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="kingfisher.html">KINGFISHER</a>
+</td>
+<td>
+<a href="ostrich.html">OSTRICH</a>
+</td>
+</tr>
+</table>
+</body>
+</html>
